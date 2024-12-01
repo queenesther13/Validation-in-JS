@@ -2,6 +2,7 @@ function valideteform(){
     var name=document.forms["registrationForm"]["name"].value;
     var email=document.forms["registrationForm"]["email"].value;
     var phone=document.forms["registrationForm"]["phone"].value;
+    var age=document.forms["registrationForm"]["age"].value;
     var message=""
     if(name==""){
         message+= "Name must be filled.\n";
@@ -15,6 +16,9 @@ function valideteform(){
         message+= "Phone number must be entered.\n";
     }else if(isNaN(phone)){
         message+= "Phone number must be numbers only.\n"
+    }
+    if(age==""){
+        message+= "Age must be filled.\n";
     }
     if(message){
         alert(message);
